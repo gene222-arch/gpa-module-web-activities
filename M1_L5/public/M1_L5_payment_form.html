@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body background="./storage/payment-form/credit-card.png">
+
+    <!-- Payment Form Container -->
+    <div>
+        <!-- Payment Form -->
+        <div>   
+            <fieldset>
+                <legend>
+                    <font size="3" face="Verdana">
+                        <h1>Payment Process</h1>
+                    </font>
+                </legend>
+
+                <table 
+                    bgcolor="#FFF"
+                >
+
+                <tbody>
+                    <form action="M1_L5_payment_finish.html">
+
+                        <tr>
+                            <td>
+                                <label for="currency">
+                                    <font face="Verdana">
+                                        Currency
+                                    </font>
+                                </label>
+                            </td>
+                            <td>
+                                <select name="currency" value="GCash">
+                                    <option value="$">U.S Dollar</option>
+                                    <option value="Peso">Philippine Peso</option>
+                                    <option value="Yen">Japanese Yen</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="payment_gateway">
+                                    <font face="Verdana">
+                                        Payment Gateway
+                                    </font>
+                                </label>
+                            </td>
+                            <td>
+                                <select name="payment_gateway" value="GCash">
+                                    <option value="GCash">GCash</option>
+                                    <option value="Paypal">Paypal</option>
+                                    <option value="Visa">Visa</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="card_number">
+                                    <font face="Verdana">
+                                        Card Number
+                                    </font>
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="card_number" placeholder="5555-5555-5555-5555">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="cvv_Code">
+                                    <font face="Verdana">
+                                        CVV Code
+                                    </font>
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="cvv_Code" placeholder="555">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="card_owner_name">
+                                    <font face="Verdana">
+                                        Card Owner Name
+                                    </font>
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="card_owner_name" placeholder="Your Name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <br>
+                                <button type="reset">Reset</button>
+                                <button type="submit">Process Payment</button>
+                            </td>
+                        </tr>
+
+                    </form>
+                </tbody>
+
+                </table>
+
+            </fieldset>
+        </div>
+    </div>
+</body>
+</html>

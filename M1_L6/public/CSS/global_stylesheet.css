@@ -1,0 +1,543 @@
+@import url('animation.css');
+/*
+ ____________________
+ |
+ | Table of Contents
+ |___________________
+*/
+/*
+    I.   Global
+    II.  Typography
+    III. Components 
+*/
+
+/*********************************************************************************************************/
+
+/*
+ * 
+ * Global
+ */
+
+ *,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 1rem;
+    text-align: left;
+}
+
+
+/*
+ * Grid System
+ */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row-height-max {
+    min-height: 100vh;
+}
+
+.justify-content-center {   
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.col {
+    /* float: left; */
+    position: relative;
+    padding: 0.75rem 0.9375rem;
+    max-width: 100%;
+}
+
+/*
+ * column width settings 
+ */
+@media screen and (min-width: 1200px)
+{     
+.col-lg-12 {
+    width: 100%;
+}
+.col-lg-11 {
+    width: 91.66666667%;
+}
+.col-lg-10 {
+    width: 83.33333333%;
+}
+.col-lg-9 {
+    width: 75%;
+}
+.col-lg-8 {
+    width: 66.66666667%;
+}
+.col-lg-7 {
+    width: 58.33333333%;
+}
+.col-lg-6 {
+    width: 50%;
+}
+.col-lg-5 {
+    width: 41.66666667%;
+}
+.col-lg-4 {
+    width: 33.33333333%;
+}
+.col-lg-3 {
+    width: 25%;
+}
+.col-lg-2 {
+    width: 16.66666667%;
+}
+.col-lg-1 {
+    width: 8.33333333%;
+}
+
+}
+@media screen and (min-width: 992px) and (max-width: 1199.98px)
+{
+.col-md-12 {
+    width: 100%;
+    }
+    .col-md-11 {
+    width: 91.66666667%;
+    }
+    .col-md-10 {
+    width: 83.33333333%;
+    }
+    .col-md-9 {
+    width: 75%;
+    }
+    .col-md-8 {
+    width: 66.66666667%;
+    }
+    .col-md-7 {
+    width: 58.33333333%;
+    }
+    .col-md-6 {
+    width: 50%;
+    }
+    .col-md-5 {
+    width: 41.66666667%;
+    }
+    .col-md-4 {
+    width: 33.33333333%;
+    }
+    .col-md-3 {
+    width: 25%;
+    }
+    .col-md-2 {
+    width: 16.66666667%;
+    }
+    .col-md-1 {
+    width: 8.33333333%;
+    }
+}
+
+@media screen and (min-width: 768px)  and (max-width: 991.98px)
+{
+    
+.col-sm-12 {
+    width: 100%;
+}
+.col-sm-11 {
+    width: 91.66666667%;
+}
+.col-sm-10 {
+    width: 83.33333333%;
+}
+.col-sm-9 {
+    width: 75%;
+}
+.col-sm-8 {
+    width: 66.66666667%;
+}
+.col-sm-7 {
+    width: 58.33333333%;
+}
+.col-sm-6 {
+    width: 50%;
+}
+.col-sm-5 {
+    width: 41.66666667%;
+}
+.col-sm-4 {
+    width: 33.33333333%;
+}
+.col-sm-3 {
+    width: 25%;
+}
+.col-sm-2 {
+    width: 16.66666667%;
+}
+.col-sm-1 {
+    width: 8.33333333%;
+}
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px)
+{   
+.col-xs-12 {
+    width: 100%;
+}
+.col-xs-11 {
+    width: 91.66666667%;
+}
+.col-xs-10 {
+    width: 83.33333333%;
+}
+.col-xs-9 {
+    width: 75%;
+}
+.col-xs-8 {
+    width: 66.66666667%;
+}
+.col-xs-7 {
+    width: 58.33333333%;
+}
+.col-xs-6 {
+    width: 50%;
+}
+.col-xs-5 {
+    width: 41.66666667%;
+}
+.col-xs-4 {
+    width: 33.33333333%;
+}
+.col-xs-3 {
+    width: 25%;
+}
+.col-xs-2 {
+    width: 16.66666667%;
+}
+.col-xs-1 {
+    width: 8.33333333%;
+}
+}
+
+
+/*
+ * Container
+ */
+
+.container {
+    margin: 0 auto;
+    padding-left: .95rem;
+    padding-right: .95rem;
+    height: 100vh;
+}
+
+.container-fluid {
+    margin: 0 auto;
+    padding-left: .95rem;
+    padding-right: .95rem;
+    min-width: 99.5%;
+    height: 100vh;
+}
+
+
+@media screen and (min-width: 1200px)
+{
+    .container {
+        /*1170px*/
+        width: 79.375rem;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px)
+{
+    .container {
+        /*970px*/
+        width: 60.625rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px)
+{
+    .container {
+        /*750px*/
+        width: 46.875rem;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px)
+{
+    .container {
+        /*1170px*/
+        width: 35.0625rem;
+    }
+}
+
+
+
+/*
+ * Button
+ */
+
+button {
+
+    display: inline-block;
+    padding: 0.6rem 1.25rem !important;
+    border-radius: .25rem !important;
+    font-size: .9rem;
+    text-align: center;
+    color: inherit;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 255ms ease-in linear;
+}
+
+button:hover,
+button:focus {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/*
+ * Input
+ */
+
+
+/*
+ * Image
+ */
+.img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/*
+ * Background color
+ */
+ /*!importan will override previous background color*/
+ .bg-default {
+    color: black;
+    background-color: light !important;
+ }
+
+.bg-primary {
+    color: white;
+    background-color:rgb(100, 100, 253) !important;
+}
+
+.bg-success {
+    color: rgb(255, 255, 255);
+    background-color:#28a745 !important;
+}
+
+.bg-warning {
+    color: black;
+    background-color: #ffc107 !important;
+}
+
+.bg-danger {
+    color: white;
+    background-color: rgb(247, 82, 53) !important;
+}
+
+
+
+
+/*
+ * 
+ * Typography
+ */
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p,
+ span,
+ a
+  {
+    margin: 0;
+    padding: 0;
+ }
+
+ a {
+     font-weight: 500;
+     text-decoration: none;
+ }
+
+ a:hover,
+ a:focus {
+    outline: 0;
+ }
+
+ .text-center {
+     text-align: center;
+ }
+ 
+/* * * * * * * *
+ *
+ * Components
+ *
+ * * * * * * * */
+
+ /*
+  * Buttons
+  */
+
+.btn {
+    display: inline-block;
+    padding: 0.4rem 1.25rem;
+    border-radius: .25rem;
+    font-size: .9rem;
+    text-align: center;
+    color: inherit;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 255ms ease-in linear;
+ }
+
+.btn:hover,
+.btn:focus {
+    transform: scale(1.025);
+    opacity: .9;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn-default {
+    color: black;
+    background-color: light;
+}
+
+.btn-primary {
+    color: white;
+    background-color:rgb(100, 100, 253);
+}
+
+.btn-success {
+    color: black;
+    background-color:#28a745;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+}
+
+.btn-danger {
+    color: white;
+    background-color: rgb(247, 82, 53);
+}
+
+
+/*
+ * Input
+ */
+
+.form-control {
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.5rem 0.75rem;
+    outline: none;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus{
+    box-shadow: 0 0 3px .5px rgb(0, 133, 216);
+}
+
+/*
+ * Prepend
+ */
+.prepend-input {
+    display: flex;
+}
+.prepend-label {
+
+    padding: .4rem;
+    height: calc(2.25rem + 2px);
+    font-weight: 400;
+    background-color: #FFF;
+    color: #a8acaf;
+    border: 1px solid  #d8e0e7;
+    border-right: none;
+    border-radius: .5rem 0 0 .5rem;
+}
+
+/*
+ * Append
+ */
+ .append-input {
+    display: flex;
+    justify-content: center;
+    flex-flow: row-reverse nowrap;
+    align-items: center;
+}
+
+.append-label {
+    padding: .4rem;
+    height: calc(2.25rem + 2px);
+    font-weight: 400;
+    background-color: #FFF;
+    color: #a8acaf;
+    border: 1px solid  #d8e0e7;
+    border-left: none;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+
+/*
+ * Image
+ */
+
+.img-rounded {
+    border-radius: .25rem;
+}
+
+/*
+ * Card
+ */
+
+ .card {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 auto;
+    padding: 0;
+    background-color: white;
+    /*The background-clip property defines how far the background should extend within an element.*/
+    background-clip: border-box;
+    border: .025rem solid rgba(0, 0, 0, .050);
+    border-radius: 0.25rem;
+ }
+ .card-header {
+    padding: .75rem .125rem;
+    margin-bottom: 0;
+    border-bottom: .5px solid rgba(0, 0, 0, .125);
+    border-radius: 0.25rem 0.25rem 0 0;
+    background-color: rgba(0, 0, 0, .050);
+ }
+ .card-body {
+     /* flex: 1 1 auto; */
+     padding: 1.25rem 0;
+     background-color: #FFF;
+ }
+/*
+ * Table
+ */
+.table-responsive {
+    overflow-x: auto;
+}
+
