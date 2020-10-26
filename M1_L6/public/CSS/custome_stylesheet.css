@@ -1,4 +1,198 @@
 /*
+ * Home Page
+ */
+
+.order__app__landing__page {
+    background:#FFF;
+    position: relative;
+    height: 100vh;
+    width: 100%
+}
+
+.order__app__landing__page .landing__page__container {
+    background:
+        linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), 
+        url('../storage/background-images/food-bg.jpg') no-repeat right;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 95%;
+    height: 96.5vh;
+}
+
+.order__app__landing__page .landing__page__content {
+    position: relative;
+    padding: 2rem;
+}
+
+.order__app__landing__page .navbar li a {
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+}
+
+.navbar .brand-logo {
+    height: 10vh;
+    font-size: 1.5rem;
+    font-family: 'Snell Roundhand';
+    color: #FFF;
+    border-top: 3px solid yellow;
+    border-bottom: 3px solid yellow;
+}
+
+.navbar .hamburger {
+    position: absolute;
+    right: 6.72%;
+    top: 8.45%;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    background-color: transparent;
+    color: yellow;
+    
+}
+
+.navbarCheckBox {
+    position: absolute;
+    right: 100%;
+    top: 8.45%;
+    opacity: 1;
+
+}
+
+#checkboxNavbar:checked ~ .nav-item {
+    display: block;
+}
+
+.navbar .nav-links li {
+    display: none;
+    
+}
+
+.text__content {
+    border-left: 0.25rem solid rgb(54, 54, 54);
+    padding-left: 1rem;
+    color: #FFF;
+}
+
+.btn-order {
+    display: block;
+    padding: 1rem 7rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-color: transparent;
+    color:#FFF;
+    border-radius: 5rem;
+    border: 1px solid rgb(226, 226, 226);
+    transition: all 255ms ease-in linear;
+}
+
+.btn-order::after {
+    content: "\f07a";
+    font-size: 1rem;
+    font-weight: 900; 
+    font-family: "Font Awesome 5 Free"; 
+    color: yellow;
+    margin-left: 1rem;
+}
+
+.btn-order:hover::after {
+    color: black;
+}
+
+.btn-order:hover,
+.btn-order:focus {
+    transform: scale(1.025);
+    background: #FFF;
+    color: black;
+}
+
+.food-online-emph {
+    padding: 0.5rem 0;
+}
+
+.hard-work-emph {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.rewarded-emph {
+    font-family: 'Snell Roundhand';
+    font-size: 3.5rem;
+    color:  rgb(252, 252, 106);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, .5);
+}
+
+.width-emph {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.heavenly-emph {
+    font-family: 'Snell Roundhand';
+    font-size: 3.5rem;
+    color:  rgb(252, 252, 106);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, .5);
+}
+
+.paragraph-content {
+    margin-top: .25rem;
+    font-size: 0.75rem;
+}
+
+/*
+ *Social Media Links
+ */
+
+.social__media__links__container {
+    position: fixed;
+    top: 27vh;
+    left: 0;
+    padding: 0.5rem;
+    background: #FFF;
+    border-radius: 0 0.5rem 0.5rem 0;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .2);
+    z-index: 1;
+}
+
+.social__media__links__container .social__links {
+    list-style: none;
+}
+
+.social__media__links__container .social-media-link {
+    font-size: 1.75rem;
+}
+
+.fab {
+    background: #FFF;
+    padding: 0.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    transition: all 255ms ease-in;
+}
+
+.fa-facebook-square {
+    color: #3b5998 ;
+}
+.fa-twitter-square {
+    color: #00acee ;
+}
+.fa-youtube-square {
+    color: red;
+}
+.fa-linkedin {
+    color: #0e76a8;
+}
+.fa-google-plus-square {
+    color: #db4a39;
+}
+
+.fab:hover,
+.fab:focus {
+    border-left: none;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .2);
+    transform: translateX(2rem);
+}
+
+/*
  * Payment Finished Page
  */
 
@@ -23,8 +217,129 @@
     font-size: 1;
 }
 
-
-
 /*
  * Payment Form Page
  */
+
+/* Global */
+
+
+.payment__app__body {
+    background-color: #76528BFF;
+}
+
+@media screen and (min-width: 1200px) {
+
+    .payment__app .payment__form__container {
+        width: calc(65.75% + 20rem);
+        height: calc(70% + 12.5rem);
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px)
+{   
+    .payment__cost__col {
+        height: 50vh;
+        margin-bottom: 0.75rem;
+    }
+    .payment__form__col {
+        margin-bottom: 0.75rem;
+
+    }
+}
+
+@media screen and (max-width: 575.98px)
+{   
+    .payment__cost__col {
+        height: 50vh;
+        margin-bottom: 0.75rem;
+    }
+    
+    .payment__form__col {
+        margin-bottom: 0.75rem;
+    }
+}
+
+.payment__cost__col {
+    height: auto;
+    padding: 2rem;
+}
+.payment__form__container {
+    height: 80vh;
+}
+
+.to__pay__container {
+    background: linear-gradient(#A88BEB, #F8CEEC);
+}
+
+.to__pay__content{
+    height: 100%;
+}
+
+.to-pay-text-container {
+    height: 100%;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.to-pay-text {
+    text-shadow: 0 1px 10px black;
+    font-size: 1rem;
+}
+
+/*
+ * Payment Form Fieldset
+ */
+.payment__form .payment__form__fieldset {
+    border-top: none;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+/*
+ * Payments Title
+ */
+.payment__form .payments-title {
+    font-weight: 100;
+    font-size: 2.5rem;
+}
+
+.payment__form .payment-instruction {
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+/*
+ * Credit Card Image
+ */
+
+.payment__form .payment__form__credit__card{
+    height: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.payment__form .credit-card-img {
+    width: 20rem;
+    height: 12.5rem;
+}
+
+/*
+ * Payment Form Buttons
+ */
+
+ .cancel-payment {
+    position: absolute;
+    bottom: 2.5%;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 1px 1px black;
+}
+
+.cancel-payment::before {
+    content: "\f359";
+    font-size: 1rem;
+    font-weight: 900; 
+    font-family: "Font Awesome 5 Free"; 
+    margin-right: 1rem;
+}
+

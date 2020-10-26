@@ -4,71 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Global Stylesheet -->
+    <link rel="stylesheet" href="./CSS/global_stylesheet.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="./CSS/custome_stylesheet.css">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./resources/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/solid.css">
 </head>
-<body background="./storage/background-images/shopping-app.png">
+<body>
     <!-- Food ordering APP -->
-    <div>
-        <!-- navbar -->
-        <div></div>
+    <div class="online___order__app">
 
-        <!--  -->
-        <div>
+        <div class="social__media__links__container">
+            <ul class="social__links">
+                <li class="social-media-item">
+                    <a href="" class="social-media-link">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                </li>
+                <li class="social-media-item">
+                    <a href="" class="social-media-link">
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                </li>
+                <li class="social-media-item">
+                    <a href="" class="social-media-link">
+                        <i class="fab fa-youtube-square"></i>
+                    </a>
+                </li>
+                <li class="social-media-item">
+                    <a href="" class="social-media-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-media-item">
+                    <a href="" class="social-media-link">
+                        <i class="fab fa-google-plus-square"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
             <!-- landing container -->
-            <div>
-                <hr size="20" noshade="">
-                <!-- landing message/text -->
-                <div>
-                    <br>
-                    <ul>
-                        <li type="none">
-                            <font size="4" face="Calibri">
-                                <small>Order Food Online</small>
-                            </font>
-                        </li>
-                        <li type="none">
-                            <font size="5" face="Verdana">
-                                <p><em>Hard work should be</em></p>
-                            </font>
-                        </li>
-                        <li type="none">
-                            <font size="6" face="Times New Roman">
-                                <h1><em>Rewarded</em></h1>
-                            </font>
-                        </li>
-                        <li type="none">
-                            <font face="Verdana" size="5">
-                                <small><em>with</em></small>
-                            </font>
-                        </li>
-                        <li type="none">
-                            <font size="6" face="Times New Roman">
-                                <h1><em>Heavenly Meals</em></h1>
-                            </font>
-                        </li>
-                        <li type="none">
-                            <font face="Verdana">
-                                <h2>
-                                    <a href="M1_L5_register_form.html">
-                                        Order now!
-                                    </a>
-                                </h2>
-                            </font>
-                        </li>
-                        <font face="Verdana">
-                            <p>
-                                <small>We're here to give you the best experience when ordering food online</small>
-                            </p>
-                        </font>
-                    </ul>
+            <div class="order__app__landing__page container-fluid">
+                <div class="landing__page__container container border-rounded">
+                    <!-- navbar -->
+                    <div class="navbar">
+
+                        <a href="" class="navbar-logo brand-logo"><h2>Logo</h2></a>
+                        <ul class="nav-links ml-auto">
+
+                            <label for="checkboxNavbar"><i class="fas fa-bars hamburger"></i></label>
+                            <input type="checkbox" name="" id="checkboxNavbar" class="navbarCheckBox">
+
+                            <li class="nav-item">
+                                <a href="" class="nav-link nav-active">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Testimonials</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- landing message/text -->
+                    <div class="landing__page__content">
+                        <div class="text__content row">
+                            <div class="col-md-12">
+                                <p class="hard-work-emph">Hard work should be</p>
+                                <h1 class="rewarded-emph"><em>Rewarded</em></h1>
+                                <p class="with-emph">with</p>
+                                <h1 class="heavenly-emph"><em>Heavenly Meals</em></h1> 
+                                <small class="food-online-emph">Order Food Online</small>
+                                <p class="paragraph-content">
+                                    We're here to give you the best experience when ordering food online.
+                                </p>  
+                                <p class="paragraph-content">
+                                    Food is delivered faster 
+                                </p>
+                                <p class="paragraph-content">
+                                    No delay
+                                </p>
+                                <p class="paragraph-content">
+                                    And quality is preserved.
+                                </p>
+                                
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-md-12">
+                                <a href="" class="btn-order">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- landing page video  -->
-                <br><br><br><br><br><br><br><br><br><br><br><br>
-                <hr size="20" noshade="">
             </div>
-            <br><br><br><br>
 
             <!-- Foods Offer -->
-            <div>
+            <div class="main home_page_sub_content mt-10">
                 <ul>
                     <li type="none">
                         <table
@@ -251,6 +291,7 @@
                     </li>
                 </ul>
             </div>
+
             <div>
                 <ul>
                     <li>
@@ -427,8 +468,6 @@
                     </table>
                 </div>                
             </div>            
-        </div>
-        <br><br><br><br><br><br><br><br><br><br>
 
         <!-- Footer Links -->
         <div>
@@ -500,6 +539,5 @@
         &copy; 2020 · Gene Phillip Artista · All rights reserved
     </div>
 
-    </div>
 </body>
 </html>
