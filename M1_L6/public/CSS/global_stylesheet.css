@@ -50,6 +50,10 @@ body {
     justify-content: center;
 }
 
+.justify-content-space-around {   
+    justify-content: space-around;
+}
+
 .align-items-center {
     align-items: center;
 }
@@ -272,7 +276,6 @@ body {
     }
 }
 
-
 /*
  * Container
  */
@@ -352,9 +355,11 @@ button:focus {
  * Global-Forms
  */
 
+
 select {
     color: #bdc4ca;;
 }
+
 
 /*
  * Global-Fieldset
@@ -408,10 +413,6 @@ fieldset {
 .mt-10 {
     margin-top: 5rem;
 }
-
-
-
-
 
 /*
  * Margin Bottom
@@ -550,11 +551,15 @@ fieldset {
   */
 
 .text-white {
-    color: #FFF;
+    color: #DDD !important;
+}
+
+.text-info {
+    color: #0074D9 !important;
 }
 
 .text-dark {
-    color: rgb(59, 59, 59);
+    color: rgb(59, 59, 59) !important;
 }
 
  
@@ -622,7 +627,7 @@ fieldset {
 
 
 /*
- * Forms
+ * Form Control
  */
 
 .form-control {
@@ -637,6 +642,20 @@ fieldset {
 .form-control:focus{
     box-shadow: 0 0 3px .5px rgb(0, 133, 216);
 }
+
+
+.form-control-textarea {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    outline: none;
+    border: 1px solid #ced4da;
+}
+
+.form-control-textarea:focus{
+    box-shadow: 0 0 3px .5px rgb(0, 133, 216);
+}
+
 
 /*
  * Prepend
@@ -709,7 +728,7 @@ fieldset {
     border-radius: 0.25rem;
  }
  .card-header {
-    padding: .75rem .125rem;
+    padding: .75rem;
     margin-bottom: 0;
     border-bottom: .5px solid rgba(0, 0, 0, .125);
     border-radius: 0.25rem 0.25rem 0 0;
@@ -717,8 +736,16 @@ fieldset {
  }
  .card-body {
      /* flex: 1 1 auto; */
-     padding: 1.25rem 0;
+     padding: 1.25rem .75rem;
      background-color: #FFF;
+ }
+
+ .card-footer {
+    padding: .5rem;
+    margin-top: 0;
+    border-top: .5px solid rgba(0, 0, 0, .125);
+    border-radius: 0.25rem 0.25rem 0 0;
+    background-color: rgba(0, 0, 0, .050);
  }
 
 /*
@@ -751,7 +778,6 @@ fieldset {
 }
 
 .navbar .nav-links {
-
     display: flex;
     list-style: none;
 }
@@ -769,5 +795,16 @@ fieldset {
     padding: 0.75rem 1rem;
     border-bottom: .125rem solid rgb(248, 248, 69);
     border-radius: 0.125rem;
+}
+
+
+
+.footer {
+    position: relative;
+    bottom: 0;
+    background-color: #cccccc;
+    height: auto;
+    width: 100%;
+    padding: 1.5rem;
 }
 
