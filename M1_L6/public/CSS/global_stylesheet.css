@@ -54,6 +54,10 @@ body {
     justify-content: space-around;
 }
 
+.justify-content-space-evenly {   
+    justify-content: space-evenly;
+}
+
 .align-items-center {
     align-items: center;
 }
@@ -334,9 +338,9 @@ body {
 button {
 
     display: inline-block;
-    padding: 0.6rem 1.25rem !important;
-    border-radius: .25rem !important;
-    font-size: .9rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: 1rem;
+    font-size: 1rem;
     text-align: center;
     color: inherit;
     outline: none;
@@ -347,7 +351,6 @@ button {
 
 button:hover,
 button:focus {
-    transform: scale(1.05);
     opacity: 0.9;
 }
 
@@ -562,6 +565,10 @@ fieldset {
     color: rgb(59, 59, 59) !important;
 }
 
+.text-gray {
+    color: #6b6969;;
+}
+
  
 /* * * * * * * *
  *
@@ -575,7 +582,7 @@ fieldset {
 
 .btn {
     display: inline-block;
-    padding: 0.4rem 1.25rem;
+    padding: 0.5rem 1.25rem;
     border-radius: .25rem;
     font-size: .9rem;
     text-align: center;
@@ -588,7 +595,6 @@ fieldset {
 
 .btn:hover,
 .btn:focus {
-    transform: scale(1.0025);
     opacity: .9;
 }
 
@@ -626,6 +632,21 @@ fieldset {
 }
 
 
+.btn-outline-default {
+
+    font-size: 1rem;
+    font-weight: 700;
+    color: #FFF;
+    border: 1.5px solid #FFF;
+    background-color: transparent;
+}
+
+.btn-outline-default:hover {
+    background-color: #FFF;
+    color: #000;
+    border: none;
+}
+
 /*
  * Form Control
  */
@@ -633,10 +654,11 @@ fieldset {
 .form-control {
     width: 100%;
     height: calc(2.25rem + 2px);
-    font-size: 1rem;
-    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    padding: 1.25rem;
     outline: none;
     border: 1px solid #ced4da;
+    border-radius: 0.2rem;
 }
 
 .form-control:focus{
@@ -670,8 +692,8 @@ fieldset {
 .prepend-label {
     /*Avoid new lines*/
     white-space: nowrap;
-    padding: .4rem;
-    height: calc(2.25rem + 2px);
+    padding: .6rem;
+    height: calc(2.5rem + 2px);
     font-weight: 400;
     background-color: #FFF;
     color: #8f8f8f;

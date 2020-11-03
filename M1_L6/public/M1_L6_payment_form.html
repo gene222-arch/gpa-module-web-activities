@@ -12,83 +12,61 @@
     <link rel="stylesheet" href="./resources/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="./resources/fontawesome/css/brands.css">
     <link rel="stylesheet" href="./resources/fontawesome/css/solid.css">
+
+
+    <style>
+        .payment__app {
+            background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('./storage/background-images/payment-bg.jpg') no-repeat center;
+            background-size: cover;
+            padding: 1rem 10rem;
+            height: 100vh;
+            width: 100%;
+            margin: auto;
+        }
+        .payment__app .sidebar-container {
+            position: relative;
+            height: 90%;
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        .payment__app .sidebar-container .row {
+            height: 100%;
+        }
+
+        .payment__app .sidebar-container {
+            height: 90%;
+        }
+    </style>
+
 </head>
-<body class="payment__app__body">
+<body>
+    <div class="payment__app row justify-content-center align-items-center">
 
-
-    <div class="payment__app p-0">
-        <!-- Payment Form Container -->
-        <div class="container-fluid">   
-            <!-- <div class=""> -->
-                <div class="row payment__form__container">
-                    <div class="col col-lg-4 col-md-12 col-sm-12 col-xs-12 col-dxs-12 to__pay__container m-0 p-0 payment__cost__col">
-                        <div class="to__pay__content">
-                            <div class="to-pay-text-container row align-items-center">
-                                <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12 text-center">
-                                    <small class="to-pay-text">To pay</small>
-                                    <p>$ 350</p>      
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cancel__payment__container">
-                            <div class="row justify-content-center">
-                                <a href="" class="btn btn-transparent cancel-payment">Cancel Payment</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col col-lg-8 col-md-12 col-sm-12 col-xs-12 col-dxs-12 payment__form m-0 p-0 payment__form__col">
-                        <fieldset class="p-2 m-0 bg-default payment__form__fieldset">
-                            <div class="payment__form__instruction">
-                                <p class="payments-title">Payments</p>
-                                <h5 class="payment-instruction">Fill in credit card to begin.</h5>
-                            </div>
-                            <div class="payment__form__credit__card row justify-content-center">
-                                <img src="./storage/payment-form/visa_credit_card.png" class="img credit-card-img" alt="">
-                            </div>
-                            <form action="">
-                                <div class="row">
-                                    <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 col-dxs-12">
-                                        <label for="payment_gateway" class="payment-form-label payment-gateway-label">Payment Type</label>
-                                        <select class="form-control payment_gateway" name="">
-                                            <option value="Visa">Visa</option>
-                                            <option value="Paypal">Paypal</option>
-                                            <option value="GCash">GCash</option>
-                                        </select>
-                                    </div>
-                                    <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 col-dxs-12">
-                                        <label for="currency" class="payment-form-label currency-label">Currency</label>
-                                        <select class="form-control currency" name="">
-                                            <option value="U.S Dollar">U.S Dollar</option>
-                                            <option value="Philippine Peso">Peso</option>
-                                            <option value="Yen">Yen</option>
-                                        </select>
-                                    </div>  
-                                    <div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12 col-dxs-12">
-                                        <label for="card_number" class="payment-form-label card-number-label">Card Number</label>
-                                        <input type="text" class="form-control" placeholder="0000-0000-0000-000">
-                                    </div>   
-                                    <div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12 col-dxs-12">
-                                        <label for="cvv_code" class="payment-form-label cvv-code-label">CVV Code</label>
-                                        <input type="text" class="form-control" name="cvv_code" placeholder="0000">
-                                    </div>    
-                                    <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
-                                        <div class="prepend-input">
-                                            <span class="payment-form-label card-owner-name-label prepend-label">Card Owner</span>
-                                            <input type="text" class="form-control" name="card_owner_name" placeholder="Your Name">
-                                        </div>
-                                    </div>  
-                                    <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
-                                        <button class="btn btn-success btn-block mb-1">Pay Now</button>
-                                        <button class="btn btn-warning btn-block">Reset Inserted Data</button>
-                                    </div>  
-                                
-                                </div>
-                            </form>
-                        </fieldset>
-                    </div>
+        <div class="col col-lg-4 sidebar-container">
+            <div class="row justify-content-center align-items-center text-center">
+                <div class="col col-lg-12">
+                    <small>To Pay</small> 
+                    <h1>$ 300</h1>
                 </div>
-            <!-- </div> -->
+            </div>
+        </div>
+
+        <div class="col col-lg-8 payment__form bg-default">
+            <div class="payment-form-title">
+                <h1>Payment Form</h1>
+            </div>
+
         </div>
     </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
