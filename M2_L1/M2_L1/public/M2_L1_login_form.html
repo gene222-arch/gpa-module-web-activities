@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- Global Stylesheet -->
-    <link rel="stylesheet" href="./CSS/global_stylesheet.css">
+    <link rel="stylesheet" href="../public/CSS/global_stylesheet.css">
     <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="./CSS/custome_stylesheet.css">
+    <link rel="stylesheet" href="../public/CSS/custome_stylesheet.css">
     <!-- Fontawesome -->
-    <link rel="stylesheet" href="./resources/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="./resources/fontawesome/css/brands.css">
-    <link rel="stylesheet" href="./resources/fontawesome/css/solid.css">
-    <link rel="stylesheet" href="./resources/fontawesome/css/regular.css">
-    <link rel="stylesheet" href="./resources/fontawesome/js/all.js">
-    
+    <link rel="stylesheet" href="../../M2_L1_resources/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../../M2_L1_resources/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="../../M2_L1_resources/fontawesome/css/solid.css">
+    <link rel="stylesheet" href="../../M2_L1_resources/fontawesome/css/regular.css">
+    <link rel="stylesheet" href="../../M2_L1_resources/fontawesome/js/all.js">
+
 </head>
 <body>
     
@@ -46,22 +46,44 @@
                 <div class="row p-4">
                     <div class="col col-lg-12">
                     </div>
+
+                <!-- Email -->
                     <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
-                        <div class="prepend-input">
-                            <label for="" class="prepend-label"><i class="far fa-envelope"></i></label>
-                            <input type="text" class="form-control login-form-email" placeholder="Your Email">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                <div class="prepend-input">
+                                    <label for="" class="prepend-label"><i class="far fa-envelope"></i></label>
+                                    <input type="text" class="form-control login-form-email" placeholder="Your Email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                <div class="error-feedback border-none email-err"></div>
+                            </div>
                         </div>
                     </div>
+
+                <!-- Password -->
                     <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
-                        <div class="prepend-input">
-                            <label for="" class="prepend-label"><i class="fas fa-unlock-alt"></i></label>
-                            <input type="text" class="form-control login-form-password" placeholder="Your Password">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                <div class="prepend-input">
+                                    <label for="" class="prepend-label"><i class="fas fa-unlock-alt"></i></label>
+                                    <input type="text" class="form-control login-form-password" placeholder="Your Password">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                <div class="error-feedback border-none password-err"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="col col-lg-12 mt-1">
                     </div>
                     <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12 mt-2">
-                        <button class="btn btn-warning btn-block create-account">Sign In</button>
+                        <button class="btn btn-warning btn-block login-account">Sign In</button>
                     </div>
                 </div>
             </form>
@@ -84,6 +106,9 @@
         </div>
 
     </div>
+
+<!-- Custom JavaScript -->
+<script src="../public/JS/app.js" type="module"></script>
 </body>
 </html>
 

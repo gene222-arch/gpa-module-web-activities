@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Global Stylesheet -->
+    <link rel="stylesheet" href="./CSS/global_stylesheet.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="./CSS/custome_stylesheet.css">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../../M1_L7_resources/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../../M1_L7_resources/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="../../M1_L7_resources/fontawesome/css/solid.css">
+    <link rel="stylesheet" href="../../M1_L7_resources/fontawesome/css/regular.css">
+    <link rel="stylesheet" href="../../M1_L7_resources/fontawesome/js/all.js">
+
+    <style>
+        .product__order__form__app {
+            background: radial-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .2)),url('./storage/background-images/food-bg.jpg') no-repeat center;
+            background-size: cover;
+            padding: 2rem;
+        }
+        .product__order__form__app .order-form {
+            width: 80%;
+            height: 90vh;
+            margin: auto;
+            overflow: auto;
+            box-shadow: 0 0 10px 1px rgba(255, 255, 255, .5);
+        }
+
+        @media screen and (max-width: 768px) 
+        {
+            .product__order__form__app .order-form {
+                height: auto;
+                overflow: hidden;
+            }
+        }
+
+
+        .product__order__form__app .purchase-product-name {
+            font-weight: 700;
+            color: #2c2c2c;
+        }
+
+        .product__order__form__app .purchase-product-price {
+            font-weight: 700;
+            color: #3b7bbf;
+        }
+
+        .product__order__form__app .product_total {
+            font-weight: 700;
+        }
+
+        .product__order__form__app .product_total_price {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+    /* DIVIDER */
+        .product__order__form__app .horizontal-line {
+            margin: 3rem 0;
+            color: rgb(168, 168, 168);
+        }
+
+        .product__order__form__app .customer__info .row {
+            margin: 1rem 0; 
+        }
+
+        .product__order__form__app .customer__info .customer-info-text-header {
+            margin: 0.5rem 0 1.5rem;
+        }
+
+
+        .product__order__form__app .customer__info .billing__address__container {
+            background:rgba(252, 220, 220, 0.2);
+            height: 45vh;
+            width: 100%;
+        }
+
+        .product__order__form__app .payment-methods .payment-icon {
+            font-size: 1.5rem;
+            margin-left: 0.5rem;
+        }
+        .product__order__form__app .payment-methods .fa-cc-paypal {
+            color: #3b7bbf;
+        }
+
+        .product__order__form__app .payment-methods .fa-cc-visa {
+            color: #172274;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Order Form Container -->
+    <div class="product__order__form__app">
+        <!-- Order Form -->
+        <div class="order__form__container">
+            <div class=" order-form">
+                <div class="card-header bg-warning">
+                    <h1>Product Order Form</h1>
+                </div>
+                <div class="card">
+                    <div class="purchase-products">
+                        <div class="row justify-content-center">
+                            <div class="col col-lg-3 col-md-5 col-sm-12 col-xs-12 col-dxs-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="row">
+                                            <div class="col col-lg-12">
+                                                <input type="checkbox">
+                                                <img src="./storage/food-products/bento.png" class="img" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col col-lg-12">
+                                                <h4 class="purchase-product-name">Product Name</h4>
+                                                <p class="purchase-product-price">$ 200.00</p>
+                                            </div>
+                                            <div class="col col-lg-10 p-0">
+                                                <div class="row">
+                                                    <div class="col-lg-5 p-1">
+                                                        <label for="product_quantity">Quantity</label>
+                                                        <select name="product_quantity" class="form-control p-1" value="1">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-6 p-1">
+                                                        <label for="product_quantity">Served</label>
+                                                        <select name="product_quantity" class="form-control p-1" value="1">
+                                                            <option value="1">Hot</option>
+                                                            <option value="2">Mild</option>
+                                                            <option value="3">Cold</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-12 p-1">
+                                                        <button class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-lg-3 col-md-5 col-sm-12 col-xs-12 col-dxs-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="row">
+                                            <div class="col col-lg-12">
+                                                <input type="checkbox">
+                                                <img src="./storage/food-products/bento.png" class="img" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col col-lg-12">
+                                                <h4 class="purchase-product-name">Product Name</h4>
+                                                <p class="purchase-product-price">$ 200.00</p>
+                                            </div>
+                                            <div class="col col-lg-10 p-0">
+                                                <div class="row">
+                                                    <div class="col-lg-5 p-1">
+                                                        <label for="product_quantity">Quantity</label>
+                                                        <select name="product_quantity" class="form-control p-1" value="1">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-6 p-1">
+                                                        <label for="product_quantity">Served</label>
+                                                        <select name="product_quantity" class="form-control p-1" value="1">
+                                                            <option value="1">Hot</option>
+                                                            <option value="2">Mild</option>
+                                                            <option value="3">Cold</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-12 p-1">
+                                                        <button class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-lg-3 col-md-5 col-sm-12 col-xs-12 col-dxs-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="row">
+                                            <div class="col col-lg-12">
+                                                <input type="checkbox">
+                                                <img src="./storage/food-products/bento.png" class="img" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col col-lg-12">
+                                                <h4 class="purchase-product-name">Product Name</h4>
+                                                <p class="purchase-product-price">$ 200.00</p>
+                                            </div>
+                                            <div class="col col-lg-10 p-0">
+                                                <div class="row">
+                                                    <div class="col-lg-5 p-1">
+                                                        <label for="product_quantity">Quantity</label>
+                                                        <select name="product_quantity" class="form-control p-1" value="1">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-6 p-1">
+                                                        <label for="product_quantity">Served</label>
+                                                        <select name="product_quantity" class="form-control p-1" value="1">
+                                                            <option value="1">Hot</option>
+                                                            <option value="2">Mild</option>
+                                                            <option value="3">Cold</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-12 p-1">
+                                                        <button class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col col-lg-9 col-md-12 col-sm-12">
+                            <div class=" product__total__price__container row justify-content-space-between">
+                                <p class="product_total">Total</p>
+                                <small class="product_total_price">$ 200.00</small>
+                            </div>
+
+<hr class="horizontal-line">
+
+<!-- Customer Info -->
+                            <div class=" customer__info">
+                                <div class="customer-info-header">
+                                    <h1 class="customer-info-text-header">Customer Info</h1>
+                                </div>
+<!-- Customer Name -->
+                                <p>Personal Info</p>
+                                <div class="row">
+                                    <div class="col col-lg-6 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                        <div class="prepend-input">
+                                            <label for="" class="prepend-label">Firstname</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col col-lg-6 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                        <div class="prepend-input">
+                                            <label for="" class="prepend-label">Lastname</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+<!-- Customer Email -->
+                                <div class="row">
+                                    <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                        <div class="append-input">
+                                            <select name="" id="" class="append-label" style="padding: .75rem;">
+                                                <option value="">@gmail.com</option>
+                                                <option value="">@yahoo.com</option>
+                                            </select>
+                                            <input type="text" class="form-control" placeholder="Your Email">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+<!-- Customer Contact Phone -->
+                            <div class="row">
+                                <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                    <div class="prepend-input"> 
+                                        <label for="" class="prepend-label">+63</label>
+                                        <input type="text" class="form-control" placeholder="Your Phone Number">
+                                        
+                                    </div>
+                                </div>
+                            </div>                               
+                                <p>Billing Address</p>
+<!-- Customer Address -->       <div class="billing__address__container row">
+                                    <div class="col col-lg-12">
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col col-lg-6 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                                <div class="prepend-input">
+                                                    <label for="" class="prepend-label">City</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-6 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                                <div class="prepend-input">
+                                                    <label for="" class="prepend-label">Province</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <!-- Customer Postal Zip Code -->
+                                    <div class="col col-lg-12">
+                                        <div class="row">
+                                            <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-6 col-dxs-12">
+                                                <div class="prepend-input">
+                                                    <label for="" class="prepend-label">Postal/Zip Code</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-6 col-dxs-12">
+                                                <div class="prepend-input">
+                                                    <label for="" class="prepend-label">Country</label>
+                                                    <select class="form-control" style="padding: .75rem;">
+                                                        <option value="">Philippines</option>
+                                                        <option value="">America</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>                              
+                            </div>
+<!-- Query -->
+                            <div class="row">
+                                <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                    <p><strong>Is shipping address the same as billing address?</strong></p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="radio" name="billing_address"> Yes
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="radio" name="billing_address"> No
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                    <p><strong>Send gift?</strong></p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="radio" name="billing_address"> Yes
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="radio" name="billing_address"> No
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                    <div class="row">
+                                        <div class="col col-lg-12">
+                                            <label for="special_instructions"><strong>Special Instructions</strong></label>
+                                            <textarea name="special_instructions" class="form-control-textarea mt-3" cols="30" rows="10"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+<!-- Payment Methods -->
+                            <p><strong>Payment Methods</strong></p>
+                            <div class="row payment-methods">
+                                <div class="col col-lg-12">
+                                    <input type="radio" name="payment_method">
+                                    <i class="fas fa-credit-card payment-icon"></i>
+                                </div>
+                                <div class="col col-lg-12">
+                                    <input type="radio" name="payment_method">
+                                    <i class="fab fa-cc-paypal payment-icon"></i>
+                                </div>
+                                <div class="col col-lg-12">
+                                    <input type="radio" name="payment_method">
+                                    <i class="fab fa-cc-visa payment-icon"></i>
+                                </div>
+                            </div>
+<hr class="horizontal-line" size="2" noshade="">
+                            <div class="row justify-content-center align-items-center text-center">
+                                <div class="col col-lg-12">
+                                    <a href="./M1_L7_payment_finish.html" class="btn btn-success">Submit Order</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

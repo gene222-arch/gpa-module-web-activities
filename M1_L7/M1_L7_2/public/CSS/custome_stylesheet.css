@@ -113,12 +113,6 @@
     opacity: 0.8;
 }
 
-.nav-active {
-    padding: 0.75rem 1rem;
-    border-bottom: .125rem solid rgb(248, 248, 69);
-    border-radius: 0.125rem;
-}
-
 /*
  * Navbar Checkbox
  */
@@ -257,6 +251,7 @@
 .btn-active:hover {
     background-color: transparent;
     color: #FFF;
+
 }
 
 /* * * *
@@ -410,7 +405,7 @@
 }
 
 .local__cuisine {
-    width: 88%;
+    width: 85%;
     height: auto;
 }
 

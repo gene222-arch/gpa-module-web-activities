@@ -42,6 +42,10 @@ body {
     flex-wrap: wrap;
 }
 
+.no-wrap {
+    flex-wrap: nowrap;
+}
+
 /* .row-height-max {
     min-height: 100vh;
 } */
@@ -76,7 +80,7 @@ body {
 
 .column {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
 }
 
 .col {
@@ -293,6 +297,16 @@ body {
 }
 
 /*
+ * Attributes
+ */
+
+ :disabled {
+     opacity: 0.4;
+ }
+
+
+
+/*
  * Container
  */
 
@@ -347,8 +361,22 @@ body {
  * Button
  */
 
-button:hover,
-button:focus {
+button {
+
+    display: inline-block;
+    padding: 0.6rem 1.25rem;
+    border-radius: .25rem;
+    font-size: .9rem;
+    text-align: center;
+    color: inherit;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 255ms ease-in linear;
+}
+
+button:hover:enabled,
+button:focus:enabled {
     opacity: 0.9;
 }
 
@@ -494,8 +522,9 @@ textarea:focus{
 }
 
 .border-none {
-    border-radius: 0 !important;
+    border: none !important;
 }
+
  
 /*
  * Background color
@@ -606,6 +635,10 @@ textarea:focus{
     color: rgb(59, 59, 59) !important;
 }
 
+.text-danger {
+    color: rgb(255, 62, 62) !important;
+}
+
 .text-warning {
     color: #ffc107;
 }
@@ -630,7 +663,6 @@ textarea:focus{
     padding: 0.6rem 1.25rem;
     border-radius: .25rem;
     font-size: .9rem;
-    font-weight: 500;
     text-align: center;
     color: inherit;
     outline: none;
@@ -639,8 +671,8 @@ textarea:focus{
     transition: all 255ms ease-in linear;
  }
 
-.btn:hover,
-.btn:focus {
+.btn:hover:enabled,
+.btn:focus:enabled {
     opacity: .9;
 }
 
@@ -742,7 +774,7 @@ textarea:focus{
     /*Avoid new lines*/
     white-space: nowrap;
     padding: .6rem;
-    height: calc(2.5rem + 2px);
+    height: calc(2.55rem + 2px);
     font-weight: 400;
     background-color: #FFF;
     color: #8f8f8f;
@@ -763,7 +795,7 @@ textarea:focus{
 }
 
 .append-label {
-    padding: .5rem;
+    padding: .6rem;
     /* height: calc(2.25rem + 2px); */
     font-weight: 400;
     background-color: #FFF;
@@ -877,3 +909,35 @@ textarea:focus{
     padding: 1.5rem;
 }
 
+
+/*
+ * VALIDATION
+ */
+
+.is-valid {
+    border: 1px solid #28a745;
+}
+
+.is-invalid {
+    border: 1px solid tomato;
+}
+
+.error-feedback {
+    margin: 0;
+    color: tomato;
+    font-size: 0.75rem;
+    background-color: #FFF;
+    padding: 0 0.25rem;
+}
+
+/*
+ * Animation
+ */
+
+ .shown {
+     display: block;
+ }
+
+ .hidden {
+     display: none;
+ }
