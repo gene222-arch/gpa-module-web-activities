@@ -16,24 +16,45 @@ import * as _$ from '../modules/helper.js';
      * Customer Query (Radio Buttons)
      */
 
-        isShipByBillingAddress () 
+        isShipByBillingAddress: function () 
         {
-            this.isShipByBillingAddressField().forEach( choice => 
-            {
-                if (choice.checked) {
-                    return choice.value;
-                }
-            });
+            return _$.radioBtnValue(this.isShipByBillingAddressField());
         },
 
-        doSendGift () 
+        doSendGift: function () 
         {
-            this.doSendGiftField().forEach(choice => 
-            {
-                if (choice.checked) {
-                    return choice.value;
-                }
-            });
+            return _$.radioBtnValue(this.doSendGiftField());
+        },
+
+        payment: function () 
+        {
+            return _$.radioBtnValue(this.paymentField());
+        },
+
+        orders: function ()
+        {   
+            return _$.checkBoxValues(this.ordersField());
+        },
+
+        totalPriceOfCart: function (totalPriceOfCart) 
+        {
+            _$.select('.purchase-total-price').innerText = totalPriceOfCart < 0 ? 0 : totalPriceOfCart;
+            return totalPriceOfCart;
+        },
+
+        getTotalPriceOfCart: function () 
+        {
+            return parseFloat(_$.select('.purchase-total-price').innerText);
+        },
+
+        setTotalOfCart: function (checkedProducts)
+        {
+            _$.select('.total-added-to-cart').innerText = checkedProducts < 0 ? 0 : checkedProducts;
+        },
+
+        getTotalCartQuantities: function () 
+        {
+            return parseInt(_$.select('.total-added-to-cart').innerText);
         },
 
     /*
@@ -56,16 +77,14 @@ import * as _$ from '../modules/helper.js';
         zipCode: () => _$.select('.customer-zipcode').value,
 
     /*
-     * Queries Fields
+     * Queries Fields/Radio Fields
      */
 
-        isShipByBillingAddressField () 
-        {
-            return _$.selectAll('.is-ship-by-billing-address');
-        },
-        doSendGiftField () 
-        {
-            return _$.selectAll('.do-send-gift');
-        },
+        isShipByBillingAddressField: () => _$.selectAll('.is-ship-by-billing-address'),
+        doSendGiftField: () => _$.selectAll('.do-send-gift'),
+        paymentField: () => _$.selectAll('.payment-method'),
+        ordersField: () => _$.selectAll('input[name="product-checkbox"]:checked'),
+
     };
+
 

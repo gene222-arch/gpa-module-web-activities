@@ -9,25 +9,25 @@
  * Select single element  
  * @param {*} selectorName 
  */
-export const select = (selectorName) => document.querySelector(selectorName);
+export let select = (selectorName) => document.querySelector(selectorName);
 
 /**
  * Select multiple element
  * @param {*} selectorName 
  */
-export const selectAll = (selectorName) => document.querySelectorAll(selectorName);
+export let selectAll = (selectorName) => document.querySelectorAll(selectorName);
  
 /**
  * 
  * @param {*} attributeName 
  */
-export const attrib = (elementField, attributeName) => elementField.getAttribute(attributeName);
+export let attrib = (elementField, attributeName) => elementField.getAttribute(attributeName);
 
 /**
  * 
  */
 
- export const isEmpty = (value) => {
+ export let isEmpty = (value) => {
 
     if (Array.isArray(value)) {
         
@@ -43,9 +43,37 @@ export const attrib = (elementField, attributeName) => elementField.getAttribute
     
  };
 
- export const disableElem = (ele) => ele.disabled = true;
- export const enableElem = (ele) => ele.disabled = false;
+ export let disableElem = (ele) => {
 
+     if (Array.isArray(ele)) {
+         
+        ele.forEach(elem => elem.disabled = true);
+     }
+
+     return ele.disabled = true;
+ };
+
+ export let enableElem = (ele) => ele.disabled = false;
+
+ export const radioBtnValue = (radioElem) => {
+
+    let radioVal = '';
+    radioElem.forEach( elem => {
+
+        if (elem.checked) {
+            radioVal = elem.value;
+        }
+    });
+
+    return radioVal;
+ };
+
+ export const checkBoxValues = (checkBoxElem) => {
+
+    let checkBoxVal = [];
+    checkBoxElem.forEach( elem => checkBoxVal.push(elem.value));
+    return checkBoxVal;
+ };
 
 
 
@@ -55,4 +83,3 @@ export const attrib = (elementField, attributeName) => elementField.getAttribute
   * CUSTOM HELPER
   * 
   * * * * * * * * */
-

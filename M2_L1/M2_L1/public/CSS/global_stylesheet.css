@@ -377,7 +377,7 @@ button {
 
 button:hover:enabled,
 button:focus:enabled {
-    opacity: 0.9;
+    opacity: 0.7;
 }
 
 /*
@@ -624,19 +624,23 @@ textarea:focus{
   */
 
 .text-white {
-    color: #FFF !important;
+    color: rgb(228, 227, 227);
 }
 
 .text-info {
-    color: #0074D9 !important;
+    color: #0074D9;
 }
 
 .text-dark {
-    color: rgb(59, 59, 59) !important;
+    color: rgb(59, 59, 59);
+}
+
+.text-success {
+    color: #28a745;
 }
 
 .text-danger {
-    color: rgb(255, 62, 62) !important;
+    color: rgb(255, 62, 62);
 }
 
 .text-warning {
@@ -732,7 +736,7 @@ textarea:focus{
 
 .form-control {
     width: 100%;
-    /* height: calc(2.25rem + 2px); */
+    height: calc(2.87rem + 2px);
     color: #2c2c2c;
     padding: 0.75rem;
     font-size: 0.9rem;
@@ -774,7 +778,7 @@ textarea:focus{
     /*Avoid new lines*/
     white-space: nowrap;
     padding: .6rem;
-    height: calc(2.55rem + 2px);
+    height: calc(2.87rem + 2px);
     font-weight: 400;
     background-color: #FFF;
     color: #8f8f8f;

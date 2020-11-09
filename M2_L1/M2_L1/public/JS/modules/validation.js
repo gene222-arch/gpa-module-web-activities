@@ -31,9 +31,9 @@ import * as _$ from "./helper.js";
  * * * * * * * * * * /
 
 
-/*
- * Error Messages
- */
+    /*
+    * Error Messages
+    */
 
     export const ERROR_MESSAGES = 
     {
@@ -44,7 +44,7 @@ import * as _$ from "./helper.js";
         name (fieldName) {
             return [
                 `${ fieldName } field is required.`,
-                `${ fieldName } field must contain a minimum of 2 characters characters only`
+                `${ fieldName } field must contain a minimum of 2 characters characters only.`
             ];
         },
 
@@ -55,7 +55,7 @@ import * as _$ from "./helper.js";
         email (fieldName) {
             return [
                 `${ fieldName } field is required.`,
-                `${ fieldName } field is invalid`
+                `${ fieldName } field is invalid.`
             ];
         },
 
@@ -66,7 +66,7 @@ import * as _$ from "./helper.js";
         password (fieldName) {
             return [
                 `${ fieldName } field is required.`,
-                `${ fieldName} field must contain a minimum 8 characters and at least 1 symbol, 1 upper and lower case letters and a number `
+                `${ fieldName} field must contain a minimum 8 characters and at least 1 symbol, 1 upper and lower case letters and a number. `
             ];
         },
 
@@ -77,7 +77,7 @@ import * as _$ from "./helper.js";
         phoneNumber (fieldName) {
             return [
                 `${ fieldName } field is required.`,
-                `${ fieldName } field must contain a total of 11 numerical data only`
+                `${ fieldName } field must contain a total of 11 numerical data only.`
             ];
         },
 
@@ -89,7 +89,7 @@ import * as _$ from "./helper.js";
         place (fieldName) {
             return [
                 `${ fieldName } field is required.`,
-                `${ fieldName } field is invalid`
+                `${ fieldName } field is invalid.`
             ];
         },
 
@@ -100,15 +100,22 @@ import * as _$ from "./helper.js";
         zipCode (fieldName) {
             return [
                 `${ fieldName } field is required.`,
-                `${ fieldName } field is invalid`
+                `${ fieldName } field is invalid.`
             ];
+        },
+
+        /**
+         * 
+         * @param {*} fieldName 
+         */
+        checkBox (fieldName) {
+            return `${ fieldName.replace('-', ' ') } field is required.`;
         }
     };
         
     /*
     * Set Error Messages
     */
-
     export const SET_ERROR_MESSAGES = 
     {
 
@@ -121,10 +128,14 @@ import * as _$ from "./helper.js";
          */
         data (fieldName, inputClassName, errMessage) 
         {
-            showErrorFeedback(fieldName);
-            addErrorMessage(fieldName, errMessage);
-            addClassInvalid(inputClassName);
-            
+            if (! _$.isEmpty(fieldName)) {
+                showErrorFeedback(fieldName);
+                addErrorMessage(fieldName, errMessage);
+            }
+
+            if (! _$.isEmpty(inputClassName) ) {
+                addClassInvalid(inputClassName);
+            }
         }
     };
 
@@ -343,6 +354,20 @@ import * as _$ from "./helper.js";
             return fieldValue;
         },
 
+        checkBox (fieldName, fieldValue) {
+
+            if ( _$.isEmpty(fieldValue) ) {
+                SET_ERROR_MESSAGES.data(
+                    fieldName,
+                    '',
+                    ERROR_MESSAGES.checkBox(fieldName)
+                );
+              console.log(ERROR_MESSAGES.checkBox(fieldName))  
+            } 
+
+            return fieldValue;
+        }
+
     };
 
 
@@ -363,18 +388,38 @@ import * as _$ from "./helper.js";
  export const startValidation = () => { resetErrMessageValidation(); resetErrorValidation(); };
 
 /**
+ * 
  * Set Validation
- */
+ *
+ * * * * * * * * * */
 
- const showErrorFeedback = (fieldName)  => document.querySelector(`.${ fieldName.toLowerCase() }-err`).style.display = 'block';
+ const showErrorFeedback = (fieldName) => document.querySelector(`.${ fieldName.toLowerCase() }-err`).style.display = 'block';
 
  export const hideErrorFeedback = () => document.querySelectorAll('.error-feedback').forEach( elem => elem.style.display = 'none');
 
+ /**
+  * 
+  * @param {*} inputClassName 
+  */
  const addClassInvalid = (inputClassName) => document.querySelector(`.${ inputClassName }`).classList.add('is-invalid');
 
+ /**
+  * 
+  * @param {*} inputClassName 
+  */
  const addClassValid = (inputClassName) => document.querySelector(`.${ inputClassName }`).classList.add('is-valid');
+
+ /**
+  * 
+  * @param {*} fieldName 
+  */
  const addClassHidden = (fieldName) => document.querySelector(`.${ fieldName.toLowerCase() }-err`).classList.add('hidden');
 
+ /**
+  * 
+  * @param {*} fieldName 
+  * @param {*} errMessage 
+  */
  const addErrorMessage = (fieldName, errMessage) => document.querySelector(`.${ fieldName.toLowerCase() }-err`).innerHTML = errMessage;
 
 

@@ -236,7 +236,6 @@
 
 .custom-btn:hover,
 .custom-btn:focus {
-    transform: scale(1.025);
     background-color: #FFF;
     color: black;
 }
@@ -861,3 +860,175 @@
 
 
 
+
+
+/* * * * * * * * * * * * *
+ *
+ * ORDER PAYMENT
+ *
+ * * * * * * * * * * * */
+
+
+.product__order__form__app {
+    background: radial-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .2)),url('../storage/background-images/food-bg.jpg') no-repeat center;
+    background-size: cover;
+    padding: 2rem;
+}
+
+@media screen and (max-width: 768px) 
+{
+    .product__order__form__app {
+        padding: 0.5rem 1rem;
+    }
+}
+
+.product__order__form__app .order-form {
+    width: 85%;
+    height: auto;
+    margin: auto;
+    box-shadow: 0 0 10px 1px rgba(255, 255, 255, .5);
+}
+
+.product__order__form__app .order-form-content {
+    height: 90vh;
+    overflow: auto;
+}
+
+.product__order__form__app .order-form-content::-webkit-scrollbar{
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) 
+{
+    .product__order__form__app .order-form {
+        width: 100%;
+    }
+}
+
+
+.product__order__form__app .purchase-product-name {
+    font-weight: 700;
+    color: #2c2c2c;
+}
+
+.product__order__form__app .purchase-product-price {
+    font-weight: 700;
+    color: #3b7bbf;
+}
+
+.product__order__form__app .product_total {
+    font-weight: 700;
+}
+
+.product__order__form__app .product_total_price {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* DIVIDER */
+.product__order__form__app .horizontal-line {
+    margin: 3rem 0;
+    color: rgb(168, 168, 168);
+}
+
+.product__order__form__app .customer__info .row {
+    margin: 1rem 0; 
+}
+
+.product__order__form__app .customer__info .customer-info-text-header {
+    margin: 0.5rem 0 1.5rem;
+}
+
+
+.product__order__form__app .customer__info .billing__address__container {
+    background:rgba(252, 220, 220, 0.2);
+    height: 45vh;
+    width: 100%;
+}
+
+@media screen and (max-width: 991px) 
+{
+    .product__order__form__app .customer__info .billing__address__container {
+        height: auto;
+    }
+}
+
+.product__order__form__app .payment-methods .payment-icon {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+}
+.product__order__form__app .payment-methods .fa-cc-paypal {
+    color: #3b7bbf;
+}
+
+.product__order__form__app .payment-methods .fa-cc-visa {
+    color: #172274;
+}
+
+.product__order__form__app .cart__total__container {
+    font-size: 1.5rem;
+
+}
+
+.product__order__form__app .purchase-lists {
+    height: 70vh;
+    overflow-x: auto;
+}
+
+
+/* * * * * * * * * * * * * *
+ *
+ * ABOUT US PAGE
+ *
+ * * * * * * * * * * * * * */
+
+
+ *,
+ ::before,
+ ::after {
+     margin: 0;
+     padding: 0;
+     line-height: 1.6 !important;
+     box-sizing: border-box !important;
+ }
+
+ .app__about__us .about__us__container {
+     width: 95%;
+     height: auto;
+     margin: 1.5rem auto 0;
+     padding: 0.5rem 1.5rem;
+ }
+
+ .app__about__us .about__us__navbar {
+     font-size: 0.9rem;
+ }
+
+ .app__about__us .navbar-brand img{
+     width: 2.5rem;
+     height: 2.5rem;
+ }
+ .app__about__us .navbar-brand-text {
+     padding: 0;
+     font-size: 1.5rem;
+     font-weight: 700;
+     border-bottom: 3px solid rgb(255, 219, 101); 
+ }
+
+ .app__about__us .nav-active {
+   border-bottom: .125rem solid rgb(248, 248, 69);
+   border-radius: 0.125rem;
+ }
+
+ .app__about__us .nav-link:hover,
+ .app__about__us .nav-link:focus {
+   border-bottom: .125rem solid rgb(248, 248, 69);
+   border-radius: 0.125rem;
+ }
+ .app__about__us .about__us__carousel img {
+   height: 70vh !important;
+ }
+
+ .app__about__us .carousel-message {
+   background-color:rgba(0, 0, 0, 0.5);
+ }

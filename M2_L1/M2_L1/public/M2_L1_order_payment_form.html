@@ -14,102 +14,19 @@
     <link rel="stylesheet" href="../../M2_L1_resources/fontawesome/css/solid.css">
     <link rel="stylesheet" href="../../M2_L1_resources/fontawesome/css/regular.css">
     <link rel="stylesheet" href="../../M2_L1_resources/fontawesome/js/all.js">
+<style>
+    .product__order__form__app .item-category-quantity {
+        font-size: 1.25rem;
+        margin-right: 5rem;
+    }
 
-    <style>
-        .product__order__form__app {
-            background: radial-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .2)),url('./storage/background-images/food-bg.jpg') no-repeat center;
-            background-size: cover;
-            padding: 2rem;
-        }
-        .product__order__form__app .order-form {
-            width: 80%;
-            height: auto;
-            margin: auto;
-            box-shadow: 0 0 10px 1px rgba(255, 255, 255, .5);
-        }
-
-        .product__order__form__app .order-form-content {
-            height: 90vh;
-            overflow: auto;
-        }
-
-        .product__order__form__app .order-form-content::-webkit-scrollbar{
-            display: none;
-        }
-   
-
-        @media screen and (max-width: 768px) 
-        {
-            .product__order__form__app .order-form {
-                width: 100%;
-            }
-        }
-
-
-        .product__order__form__app .purchase-product-name {
-            font-weight: 700;
-            color: #2c2c2c;
-        }
-
-        .product__order__form__app .purchase-product-price {
-            font-weight: 700;
-            color: #3b7bbf;
-        }
-
-        .product__order__form__app .product_total {
-            font-weight: 700;
-        }
-
-        .product__order__form__app .product_total_price {
-            font-weight: 700;
-            font-size: 1rem;
-        }
-
-    /* DIVIDER */
-        .product__order__form__app .horizontal-line {
-            margin: 3rem 0;
-            color: rgb(168, 168, 168);
-        }
-
-        .product__order__form__app .customer__info .row {
-            margin: 1rem 0; 
-        }
-
-        .product__order__form__app .customer__info .customer-info-text-header {
-            margin: 0.5rem 0 1.5rem;
-        }
-
-
-        .product__order__form__app .customer__info .billing__address__container {
-            background:rgba(252, 220, 220, 0.2);
-            height: 45vh;
-            width: 100%;
-        }
-
-        .product__order__form__app .payment-methods .payment-icon {
-            font-size: 1.5rem;
-            margin-left: 0.5rem;
-        }
-        .product__order__form__app .payment-methods .fa-cc-paypal {
-            color: #3b7bbf;
-        }
-
-        .product__order__form__app .payment-methods .fa-cc-visa {
-            color: #172274;
-        }
-
-        .product__order__form__app .cart__total__container {
-            font-size: 3rem;
-        }
-
-        .product__order__form__app .purchase-lists {
-            height: 70vh;
-            overflow-x: auto;
-        }
-
-
-
-    </style>
+    .product__order__form__app .item-category-quantity-icon {
+        font-size: 1.5rem;
+    }
+    .product__order__form__app .purchase-total-price  {
+        font-size: 2.5rem;
+    }
+</style>
 </head>
 <body>
 
@@ -122,39 +39,63 @@
                     <h1>Product Order Form</h1>
                 </div>
                 <div class="cart__total__container bg-warning text-center">
-                    <span class="total-added-to-cart text-danger">6</span>
-                    <i class="fas fa-cart-plus border-rounded text-dark p-1"></i>
+                    <div class="row justify-content-space-between">
+                        <div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12 col-dxs-12">
+                            <span class="item-category-quantity text-dark">
+                                <i class="fas fa-th item-category-quantity-icon"></i> Product Category 
+                                <span class="total-added-to-cart text-danger">0</span>
+                            </span>
+                            
+                            <i class="fas fa-cart-plus border-rounded text-dark p-1"></i>
+                            <span class="text-dark">Cart Quantity</span>
+                            <span class="total-cart-quantity text-danger">0</span>
+                        </div>
+                        <div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12 col-dxs-12">
+                            <i class="fas fa-dollar-sign text-danger fa-2x"></i>
+                            <span class="purchase-total-price text-danger">0.00</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="card order-form-content">
 
 <!-- PURCHASED PRODUCTS -->
                     <div class="purchase-container purchase-products">
+
                         <div class="column align-items-center purchase-lists">
-                    <!-- PRODUCT CARD 1  -->
+
+                    <!-- PRODUCT #1 bento  -->
                             <div 
-                                class="col col-lg-3 col-md-5 col-sm-12 col-xs-12 col-dxs-12 purchase-product1"
-                                
+                                class="col col-lg-3 col-md-5 col-sm-6 col-xs-12 col-dxs-12 purchase-product1"
                                 >
-                                <div class="card product-one">
+                                <div class="card product product-one">
                                     <div class="card-header">
                                         <div class="row">
-                                            <div class="col col-lg-12">
-                                                <input type="checkbox">
-                                                <img src="./storage/food-products/bento.png" class="img" alt="">
+                                            <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                                <input 
+                                                    type="checkbox" 
+                                                    class="product-checkbox-1 Bento"
+                                                    name="product-checkbox"
+                                                    value="200"
+                                                    id="1"
+                                                    >
+                                                <img src="./storage/food-products/bento.png" class="img">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col col-lg-12">
-                                                <h4 class="purchase-product-name">Product Name</h4>
+                                            <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                                <h4 class="purchase-product-name">Bento</h4>
                                                 <p class="purchase-product-price">$ 200.00</p>
                                             </div>
-                                            <div class="col col-lg-10 p-0">
+                                            <div class="col col-lg-10 col-md-12 col-sm-12 col-xs-12 col-dxs-12 p-0">
                                                 <div class="row">
                                                     <div class="col-lg-5 p-1">
                                                         <label for="product_quantity">Quantity</label>
-                                                        <select name="product_quantity" class="form-control p-1" value="1">
+                                                        <select 
+                                                            name="product_quantity" 
+                                                            class="form-control p-1 product-checkbox-1 bento-quantity" 
+                                                            value="1">
                                                             <option value="1">1</option>
                                                             <option value="2">2</option>
                                                             <option value="3">3</option>
@@ -163,19 +104,13 @@
                                                             <option value="6">6</option>
                                                         </select>
                                                     </div>
-                                                    <div class="col-lg-6 p-1">
-                                                        <label for="product_quantity">Served</label>
-                                                        <select name="product_quantity" class="form-control p-1" value="1">
-                                                            <option value="1">Hot</option>
-                                                            <option value="2">Mild</option>
-                                                            <option value="3">Cold</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-lg-12 p-1">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12 p-1">
                                                         <button 
-                                                            class="btn btn-danger remove-purchase"
+                                                            class="btn btn-danger remove-purchase remove-purchase-1"
                                                             id="1"
-                                                            ><i class="far fa-trash-alt"></i></button>
+                                                            value="200"
+                                                            ><i class="far fa-trash-alt"></i>
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -183,29 +118,38 @@
                                     </div>
                                 </div>
                             </div>
-                    <!-- PRODUCT CARD 2  -->
+                    <!-- PRODUCT #2 sushi  -->
                             <div 
-                                class="col col-lg-3 col-md-5 col-sm-12 col-xs-12 col-dxs-12 purchase-product2">
-                                <div class="card product-two">
+                                class="col col-lg-3 col-md-5 col-sm-6 col-xs-12 col-dxs-12 purchase-product2">
+                                <div class="card product product-two">
                                     <div class="card-header">
                                         <div class="row">
                                             <div class="col col-lg-12">
-                                                <input type="checkbox">
-                                                <img src="./storage/food-products/bento.png" class="img" alt="">
+                                                <input 
+                                                    type="checkbox" 
+                                                    class="product-checkbox-2 Sushi-set"
+                                                    name="product-checkbox"
+                                                    value="300"
+                                                    id="2"
+                                                    >
+                                                <img src="./storage/food-products/sushi.png" class="img" alt="">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col col-lg-12">
-                                                <h4 class="purchase-product-name">Product Name</h4>
-                                                <p class="purchase-product-price">$ 200.00</p>
+                                            <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                                <h4 class="purchase-product-name">Sushi Set</h4>
+                                                <p class="purchase-product-price">$ 300.00</p>
                                             </div>
-                                            <div class="col col-lg-10 p-0">
+                                            <div class="col col-lg-10 col-md-12 col-sm-12 col-xs-12 col-dxs-12 p-0">
                                                 <div class="row">
                                                     <div class="col-lg-5 p-1">
                                                         <label for="product_quantity">Quantity</label>
-                                                        <select name="product_quantity" class="form-control p-1" value="1">
+                                                        <select 
+                                                            name="product_quantity" 
+                                                            class="form-control p-1 product-checkbox-2 sushi-quantity" 
+                                                            value="1">
                                                             <option value="1">1</option>
                                                             <option value="2">2</option>
                                                             <option value="3">3</option>
@@ -214,18 +158,11 @@
                                                             <option value="6">6</option>
                                                         </select>
                                                     </div>
-                                                    <div class="col-lg-6 p-1">
-                                                        <label for="product_quantity">Served</label>
-                                                        <select name="product_quantity" class="form-control p-1" value="1">
-                                                            <option value="1">Hot</option>
-                                                            <option value="2">Mild</option>
-                                                            <option value="3">Cold</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-lg-12 p-1">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12 p-1">
                                                         <button 
-                                                            class="btn btn-danger remove-purchase"
+                                                            class="btn btn-danger remove-purchase remove-purchase-2"
                                                             id="2"
+                                                            value="300"
                                                             ><i class="far fa-trash-alt"></i></button>
                                                     </div>
                                                 </div>
@@ -234,29 +171,38 @@
                                     </div>
                                 </div>
                             </div>
-                    <!-- PRODUCT CARD 3  -->
+                    <!-- PRODUCT #3 grilled-pork-with-salad  -->
                             <div 
-                                class="col col-lg-3 col-md-5 col-sm-12 col-xs-12 col-dxs-12 purchase-product3">
-                                <div class="card product-three">
+                                class="col col-lg-3 col-md-5 col-sm-6 col-xs-12 col-dxs-12 purchase-product3">
+                                <div class="card product product-three">
                                     <div class="card-header">
                                         <div class="row">
-                                            <div class="col col-lg-12">
-                                                <input type="checkbox">
-                                                <img src="./storage/food-products/bento.png" class="img" alt="">
+                                            <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                                <input 
+                                                    type="checkbox" 
+                                                    class="product-checkbox-3 Grilled-Pork-With-Salad"
+                                                    name="product-checkbox"
+                                                    value="400"
+                                                    id="3"
+                                                    >
+                                                <img src="./storage/food-products/grilled-food.png" class="img" alt="">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col col-lg-12">
-                                                <h4 class="purchase-product-name">Product Name</h4>
-                                                <p class="purchase-product-price">$ 200.00</p>
+                                            <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                                <h4 class="purchase-product-name">Grilled Pork with Salad</h4>
+                                                <p class="purchase-product-price">$ 400.00</p>
                                             </div>
-                                            <div class="col col-lg-10 p-0">
+                                            <div class="col col-lg-10 col-md-12 col-sm-12 col-xs-12 col-dxs-12 p-0">
                                                 <div class="row">
                                                     <div class="col-lg-5 p-1">
                                                         <label for="product_quantity">Quantity</label>
-                                                        <select name="product_quantity" class="form-control p-1" value="1">
+                                                        <select 
+                                                            name="product_quantity" 
+                                                            class="form-control p-1 product-checkbox-3 grilled-pork-with-salad-quantity" 
+                                                            value="1">
                                                             <option value="1">1</option>
                                                             <option value="2">2</option>
                                                             <option value="3">3</option>
@@ -265,18 +211,11 @@
                                                             <option value="6">6</option>
                                                         </select>
                                                     </div>
-                                                    <div class="col-lg-6 p-1">
-                                                        <label for="product_quantity">Served</label>
-                                                        <select name="product_quantity" class="form-control p-1" value="1">
-                                                            <option value="1">Hot</option>
-                                                            <option value="2">Mild</option>
-                                                            <option value="3">Cold</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-lg-12 p-1">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12 p-1">
                                                         <button 
-                                                            class="btn btn-danger remove-purchase"
+                                                            class="btn btn-danger remove-purchase remove-purchase-3"
                                                             id="3"
+                                                            value="400"
                                                             ><i class="far fa-trash-alt"></i></button>
                                                     </div>
                                                 </div>
@@ -285,31 +224,40 @@
                                     </div>
                                 </div>
                             </div>
-                    <!-- PRODUCT CARD 4  -->
+                    <!-- PRODUCT #4 pork-grilled-salad  -->
                             <div 
-                            class="col col-lg-3 col-md-5 col-sm-12 col-xs-12 col-dxs-12 purchase-product4"
+                            class="col col-lg-3 col-md-5 col-sm-6 col-xs-12 col-dxs-12 purchase-product4"
                             
                             >
-                            <div class="card product-four">
+                            <div class="card product product-four">
                                 <div class="card-header">
                                     <div class="row">
-                                        <div class="col col-lg-12">
-                                            <input type="checkbox">
-                                            <img src="./storage/food-products/bento.png" class="img" alt="">
+                                        <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                            <input 
+                                                type="checkbox" 
+                                                class="product-checkbox-4 Pork-Grilled-Salad"
+                                                name="product-checkbox"
+                                                id="4"
+                                                value="500"
+                                                >
+                                            <img src="./storage/food-products/japan-1.png" class="img" alt="">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col col-lg-12">
-                                            <h4 class="purchase-product-name">Product Name</h4>
-                                            <p class="purchase-product-price">$ 200.00</p>
+                                        <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                            <h4 class="purchase-product-name">Pork Grilled Salad</h4>
+                                            <p class="purchase-product-price">$ 500.00</p>
                                         </div>
-                                        <div class="col col-lg-10 p-0">
+                                        <div class="col col-lg-10 col-md-12 col-sm-12 col-xs-12 col-dxs-12 p-0">
                                             <div class="row">
                                                 <div class="col-lg-5 p-1">
                                                     <label for="product_quantity">Quantity</label>
-                                                    <select name="product_quantity" class="form-control p-1" value="1">
+                                                    <select 
+                                                        name="product_quantity" 
+                                                        class="form-control p-1 product-checkbox-4 pork-grilled-salad-quantity" 
+                                                        value="1">
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
                                                         <option value="3">3</option>
@@ -318,18 +266,11 @@
                                                         <option value="6">6</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-lg-6 p-1">
-                                                    <label for="product_quantity">Served</label>
-                                                    <select name="product_quantity" class="form-control p-1" value="1">
-                                                        <option value="1">Hot</option>
-                                                        <option value="2">Mild</option>
-                                                        <option value="3">Cold</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-lg-12 p-1">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12 p-1">
                                                     <button 
-                                                        class="btn btn-danger remove-purchase"
+                                                        class="btn btn-danger remove-purchase remove-purchase-4"
                                                         id="4"
+                                                        value="500"
                                                         ><i class="far fa-trash-alt"></i></button>
                                                 </div>
                                             </div>
@@ -338,29 +279,38 @@
                                 </div>
                             </div>
                             </div>
-                    <!-- PRODUCT CARD 5  -->
+                    <!-- PRODUCT #5 wrapped-karaage  -->
                             <div 
-                                class="col col-lg-3 col-md-5 col-sm-12 col-xs-12 col-dxs-12 purchase-product5">
-                                <div class="card product-five">
+                                class="col col-lg-3 col-md-5 col-sm-6 col-xs-12 col-dxs-12 purchase-product5">
+                                <div class="card product product-five">
                                     <div class="card-header">
                                         <div class="row">
-                                            <div class="col col-lg-12">
-                                                <input type="checkbox">
-                                                <img src="./storage/food-products/bento.png" class="img" alt="">
+                                            <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                                <input 
+                                                    type="checkbox" 
+                                                    class="product-checkbox-5 Wrapped-Karaage"
+                                                    name="product-checkbox"
+                                                    id="5"
+                                                    value="550"
+                                                    >
+                                                <img src="./storage/food-products/wrap.png" class="img" alt="">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col col-lg-12">
-                                                <h4 class="purchase-product-name">Product Name</h4>
-                                                <p class="purchase-product-price">$ 200.00</p>
+                                            <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                                <h4 class="purchase-product-name">Wrapped Karaage</h4>
+                                                <p class="purchase-product-price">$ 550.00</p>
                                             </div>
-                                            <div class="col col-lg-10 p-0">
+                                            <div class="col col-lg-10 col-md-12 col-sm-12 col-xs-12 col-dxs-12 p-0">
                                                 <div class="row">
                                                     <div class="col-lg-5 p-1">
                                                         <label for="product_quantity">Quantity</label>
-                                                        <select name="product_quantity" class="form-control p-1" value="1">
+                                                        <select 
+                                                            name="product_quantity" 
+                                                            class="form-control p-1 product-checkbox-5 wrapped-karaage-quantity" 
+                                                            value="1">
                                                             <option value="1">1</option>
                                                             <option value="2">2</option>
                                                             <option value="3">3</option>
@@ -369,18 +319,11 @@
                                                             <option value="6">6</option>
                                                         </select>
                                                     </div>
-                                                    <div class="col-lg-6 p-1">
-                                                        <label for="product_quantity">Served</label>
-                                                        <select name="product_quantity" class="form-control p-1" value="1">
-                                                            <option value="1">Hot</option>
-                                                            <option value="2">Mild</option>
-                                                            <option value="3">Cold</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-lg-12 p-1">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12 p-1">
                                                         <button 
-                                                            class="btn btn-danger remove-purchase"
+                                                            class="btn btn-danger remove-purchase remove-purchase-5"
                                                             id="5"
+                                                            value="550"
                                                             ><i class="far fa-trash-alt"></i></button>
                                                     </div>
                                                 </div>
@@ -389,29 +332,41 @@
                                     </div>
                                 </div>
                             </div>
-                    <!-- PRODUCT CARD 6  -->
+                    <!-- PRODUCT #6 grilled-pork  -->
                             <div 
-                                class="col col-lg-3 col-md-5 col-sm-12 col-xs-12 col-dxs-12 purchase-product6">
-                                <div class="card product-six">
+                            
+                                class="col col-lg-3 col-md-5 col-sm-6 col-xs-12 col-dxs-12 purchase-product6">
+                                <div class="card product product-six">
                                     <div class="card-header">
                                         <div class="row">
-                                            <div class="col col-lg-12">
-                                                <input type="checkbox">
-                                                <img src="./storage/food-products/bento.png" class="img" alt="">
+                                            <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                                <input 
+                                                    type="checkbox" 
+                                                    class="product-checkbox-6 Grilled-Pork-With-Ceasar-Salad" 
+                                                    name="product-checkbox"
+                                                    id="6"
+                                                    value="600"
+                                                    >
+                                                <img src="./storage/food-products/grilled-with-ceasar-salad.png" class="img" alt="">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col col-lg-12">
-                                                <h4 class="purchase-product-name">Product Name</h4>
-                                                <p class="purchase-product-price">$ 200.00</p>
+                                            <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
+                                                <h4 class="purchase-product-name">Grilled Pork</h4>
+                                                <p class="purchase-product-price">$ 600.00</p>
                                             </div>
-                                            <div class="col col-lg-10 p-0">
+                                            <div class="col col-lg-10 col-md-12 col-sm-12 col-xs-12 col-dxs-12 p-0">
                                                 <div class="row">
                                                     <div class="col-lg-5 p-1">
                                                         <label for="product_quantity">Quantity</label>
-                                                        <select name="product_quantity" class="form-control p-1" value="1">
+                                                        <select 
+                                                            name="product_quantity" 
+                                                            class="form-control p-1 product-checkbox-6 grilled-pork-quantity" 
+                                                            value="1"
+                                                            
+                                                            >
                                                             <option value="1">1</option>
                                                             <option value="2">2</option>
                                                             <option value="3">3</option>
@@ -420,18 +375,11 @@
                                                             <option value="6">6</option>
                                                         </select>
                                                     </div>
-                                                    <div class="col-lg-6 p-1">
-                                                        <label for="product_quantity">Served</label>
-                                                        <select name="product_quantity" class="form-control p-1" value="1">
-                                                            <option value="1">Hot</option>
-                                                            <option value="2">Mild</option>
-                                                            <option value="3">Cold</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-lg-12 p-1">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12 p-1">
                                                         <button 
-                                                            class="btn btn-danger remove-purchase"
+                                                            class="btn btn-danger remove-purchase remove-purchase-6"
                                                             id="6"
+                                                            value="600"
                                                             ><i class="far fa-trash-alt"></i></button>
                                                     </div>
                                                 </div>
@@ -439,23 +387,16 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>                            
+                            </div>   
+
                         </div>
+
                     </div>
 <!-- PURCHASED PRODUCTS -->     
 
                     <div class="row justify-content-center">
                         <div class="col col-lg-9 col-md-12 col-sm-12">
-                            <div class=" product__total__price__container row justify-content-space-between">
-                                <p class="product_total">Total</p>
-                                <small class="product_total_price">
-                                    <span>$</span>
-                                    <span class="purchase-total-price">00.00</span>
-                                </small>
-                            </div>
-
 <hr class="horizontal-line">
-
 <!-- Customer Info -->
                             <div class=" customer__info">
                                 <div class="customer-info-header">
@@ -522,7 +463,7 @@
                             </div>                               
                                 <p>Billing Address</p>
 <!-- Customer Address -->       <div class="billing__address__container row">
-                                    <div class="col col-lg-12">
+                                    <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
                                         <div class="row justify-content-center align-items-center">
                                             <div class="col col-lg-6 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
                                                 <div class="prepend-input">
@@ -550,12 +491,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                <!-- Customer Postal Zip Code -->
-                                    <div class="col col-lg-12">
+<!-- Customer Postal Zip Code -->
+                                    <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
                                         <div class="row">
                                             <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-6 col-dxs-12">
                                                 <div class="prepend-input">
-                                                    <label for="" class="prepend-label">Postal/Zip Code</label>
+                                                    <label for="" class="prepend-label">Zip Code</label>
                                                     <input 
                                                         type="text" 
                                                         class="form-control customer-zipcode"
@@ -586,7 +527,10 @@
 <!-- Query -->
                             <div class="row">
                                 <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
-                                    <p><strong>Is shipping address the same as billing address?</strong></p>
+                                    <div class="error-feedback question-1-err"></div>
+                                    <p>
+                                        <strong>Is shipping address the same as billing address?</strong>
+                                    </p>
                                     <div class="row">
                                         <div class="col">
                                             <input 
@@ -609,7 +553,10 @@
                                     </div>
                                 </div>
                                 <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 col-dxs-12">
-                                    <p><strong>Send gift?</strong></p>
+                                    <div class="error-feedback question-2-err"></div>
+                                    <p>
+                                        <strong>Send gift?</strong>
+                                    </p>
                                     <div class="row">
                                         <div class="col">
                                             <input 
@@ -648,30 +595,37 @@
                             </div>
 <!-- Payment Methods -->
                             <p><strong>Payment Methods</strong></p>
+                            <div class="error-feedback payment-method-err"></div>
                             <div class="row payment-methods">
                                 <div class="col col-lg-12">
                                     <input 
                                         type="radio" 
                                         name="payment_method"
                                         class="payment-method"
+                                        value="credit"
                                         >
-                                    <i class="fas fa-credit-card payment-icon"></i>
+                                    <i class="fas fa-credit-card payment-icon"></i> 
+                                    <span>Credit Card</span>
                                 </div>
                                 <div class="col col-lg-12">
                                     <input 
                                         type="radio" 
                                         name="payment_method"
                                         class="payment-method"
+                                        value="paypal"
                                         >
                                     <i class="fab fa-cc-paypal payment-icon"></i>
+                                    <span>PayPal</span>
                                 </div>
                                 <div class="col col-lg-12">
                                     <input 
                                         type="radio" 
                                         name="payment_method"
                                         class="payment-method"
+                                        value="visa"
                                         >
                                     <i class="fab fa-cc-visa payment-icon"></i>
+                                    <span>Visa</span>
                                 </div>
                             </div>
 
